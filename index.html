@@ -10,13 +10,14 @@
 	<div class="wrapper">
 		<p class="text">Привет, Мир!</p>
 
+		<div class="frame"></div>
+
 		<div class="step">
 			<input type="radio" name="step" id="01" value="0.1" checked><label for="01">0.1%</label>
 			<input type="radio" name="step" id="05" value="0.5"><label for="05">0.5%</label>
 			<input type="radio" name="step" id="1" value="1"><label for="1">1%</label>
 			<input type="radio" name="step" id="5" value="5"><label for="5">5%</label>
 		</div>
-
 	</div>
 
 <script type="text/javascript" src="lib/jquery-2.1.4.min.js"></script>
@@ -46,6 +47,11 @@
 			.replace('{left}', leftPos)
 			.replace('{right}', 100 - leftPos - viewportWidth);
 		$('.text').css('-webkit-clip-path', inset);
+		$('.text').css('clip-path', inset);
+
+		$('.frame').css('top', '50px');
+		$('.frame').css('left', '{left}%'
+			.replace('{left}', leftPos));
 	}
 
 	$('.step input').click(function(e) {

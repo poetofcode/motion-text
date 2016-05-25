@@ -4,10 +4,17 @@
 }
 
 html, body {
-	background: #555;
+	background: #666;
 	margin: 0;
 	padding: 0;
 	height: 100%;
+}
+
+.wrapper {
+	background-color: #666;
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
 }
 
 p.text {
@@ -26,10 +33,18 @@ div {
 
 .step input {
 	margin-left: 20px;
+	margin-top: 50px;
 }
 
-.wrapper {
-	background-color: #555;
-	width: 960px;
-	margin: 0 auto;
+.frame {
+	box-sizing: border-box;
+	outline: 10px solid #222;
+	border-top: 20px solid #222;
+	border-bottom: 20px solid #222;
+	width: 10%;
+	height: 250px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin-top: -100px;
 }
